@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f5132">
+  <meta name="description" content="Spice Garden digital restaurant menu">
+  <title>Spice Garden | Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="restaurant-header">
+    <div class="brand">
+      <img id="restaurantLogo" class="logo" src="spice-garden-logo.svg" alt="Spice Garden logo">
+      <div>
+        <h1 id="restaurantName">Spice Garden</h1>
+        <p id="restaurantDescription" class="tagline">Fresh flavours. Warm hospitality.</p>
+        <p id="restaurantAddress" class="detail"></p>
+        <p id="restaurantPhone" class="detail"></p>
+        <p id="restaurantHours" class="detail"></p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <a id="callLink" class="action-button" href="#">Call</a>
+      <a id="whatsappLink" class="action-button outline" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="sticky-controls">
+    <div class="food-switch" role="tablist" aria-label="Food type">
+      <button type="button" class="food-tab veg active" data-type="VEG">
+        <span class="indicator veg-indicator"></span> Veg
+      </button>
+      <button type="button" class="food-tab nonveg" data-type="NONVEG">
+        <span class="indicator nonveg-indicator"></span> Non-Veg
+      </button>
+    </div>
+
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Search menu items..." autocomplete="off">
+    </div>
+
+    <nav id="categoryNav" class="category-nav" aria-label="Categories"></nav>
+  </section>
+
+  <main>
+    <div id="loading" class="status">Loading Spice Garden menu...</div>
+    <div id="error" class="status error hidden"></div>
+    <div id="empty" class="status hidden">No matching dishes found.</div>
+    <div id="menuContainer" class="menu-container"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title">Spice Garden</div>
+    <div class="web-credit">
+      Contact us for websites like this:
+      <strong>UV Web Creations</strong>
+      <a href="tel:+919392417891">9392417891</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

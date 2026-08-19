@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f5132"/>
+      <stop offset="1" stop-color="#173f2f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="140" fill="url(#bg)"/>
+  <circle cx="320" cy="305" r="205" fill="#fff8e8"/>
+  <path d="M319 184c-57 0-106 37-124 88 35-26 78-36 122-27-36 18-67 46-89 81 24 10 51 16 78 16 95 0 175-68 193-158-41 34-93 53-147 53-10 0-20-1-30-2 20-18 35-36 44-51-15 0-31 0-47 0z" fill="#65a765"/>
+  <path d="M316 236c-10 55-7 120 13 188" fill="none" stroke="#0f5132" stroke-width="18" stroke-linecap="round"/>
+  <text x="320" y="485" text-anchor="middle" font-size="76" font-weight="800" font-family="Arial, sans-serif" fill="#0f5132">SG</text>
+  <text x="320" y="548" text-anchor="middle" font-size="31" font-weight="700" font-family="Arial, sans-serif" fill="#b78427">SPICE GARDEN</text>
+</svg>
