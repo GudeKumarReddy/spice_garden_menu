@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section id="loginCard" class="panel login-panel">
+      <h1>Restaurant Menu Admin</h1>
+      <p>Enter your admin password.</p>
+      <input id="password" type="password" placeholder="Admin password" autocomplete="current-password">
+      <button id="loginBtn" class="primary" type="button">Login</button>
+      <p id="loginMessage" class="error"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="admin-topbar">
+        <div>
+          <h1>Menu Admin</h1>
+          <p>Manage restaurant details, Veg/Non‑Veg categories and menu items.</p>
+        </div>
+        <button id="logoutBtn" class="secondary" type="button">Logout</button>
+      </div>
+
+      <section class="panel">
+        <h2>Restaurant Details</h2>
+        <div class="form-grid two">
+          <label>Restaurant Name<input id="restaurant_name"></label>
+          <label>Phone<input id="phone"></label>
+          <label>WhatsApp<input id="whatsapp"></label>
+          <label>Email<input id="email" type="email"></label>
+          <label class="wide">Address<textarea id="address"></textarea></label>
+          <label class="wide">Description<textarea id="description"></textarea></label>
+          <label class="wide">Working Hours<input id="working_hours" placeholder="11:00 AM - 11:00 PM"></label>
+          <label>Logo Image<input id="logoFile" type="file" accept="image/*"></label>
+          <label>Developer Name<input id="developer_name"></label>
+          <label>Developer Phone<input id="developer_phone"></label>
+        </div>
+        <button id="saveSettingsBtn" class="primary" type="button">Save Restaurant Details</button>
+        <p id="settingsMessage"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Categories</h2>
+        <form id="categoryForm">
+          <input type="hidden" id="categoryId">
+          <div class="form-grid three">
+            <label>Food Type
+              <select id="categoryFoodType" required>
+                <option value="VEG">VEG</option>
+                <option value="NONVEG">NONVEG</option>
+                <option value="SHARED">SHARED</option>
+              </select>
+            </label>
+            <label>Category Name<input id="categoryName" required></label>
+            <label>Display Order<input id="categoryOrder" type="number" min="1" value="1" required></label>
+          </div>
+          <label class="check"><input id="categoryActive" type="checkbox" checked> Active</label>
+          <button class="primary" type="submit">Save Category</button>
+          <button id="cancelCategory" class="secondary hidden" type="button">Cancel</button>
+        </form>
+        <div id="categoryList" class="list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Menu Items</h2>
+        <form id="itemForm">
+          <input type="hidden" id="itemId">
+          <div class="form-grid two">
+            <label>Category<select id="itemCategory" required></select></label>
+            <label>Item Name<input id="itemName" required></label>
+            <label class="wide">Description<textarea id="itemDescription"></textarea></label>
+            <label>Price (₹)<input id="itemPrice" type="number" min="0" step="1" required></label>
+            <label>Badge<input id="itemBadge" placeholder="Popular / Chef Special / Bestseller"></label>
+            <label>Display Order<input id="itemOrder" type="number" min="1" value="1" required></label>
+            <label>Food Photo<input id="itemPhoto" type="file" accept="image/*"></label>
+          </div>
+          <label class="check"><input id="itemAvailable" type="checkbox" checked> Available</label>
+          <button class="primary" type="submit">Save Item</button>
+          <button id="cancelItem" class="secondary hidden" type="button">Cancel</button>
+        </form>
+        <p id="itemMessage"></p>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="ALL" type="button">All</button>
+          <button class="filter-btn" data-filter="VEG" type="button">Veg</button>
+          <button class="filter-btn" data-filter="NONVEG" type="button">Non‑Veg</button>
+          <button class="filter-btn" data-filter="SHARED" type="button">Shared</button>
+        </div>
+        <div id="itemList" class="list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
